@@ -3,7 +3,7 @@ class Response < ActiveRecord::Base
 
   belongs_to :message
 
-  has_many :orders
+  has_one :orders
   has_many :supplies, through: :orders
 
   def archived?  ; !!archived_at ; end
